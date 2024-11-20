@@ -36,5 +36,5 @@ aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS
 docker push $ECR_BASE_URI/$ECR_NAME:$IMAGE_TAG
 
 # # Update Lambda function code
-# echo "\033[33mUpdating Lambda function: $LAMBDA_FUNCTION_NAME\033[0m"  # 黄色
-# aws lambda update-function-code --function-name $LAMBDA_FUNCTION_NAME --image-uri $ECR_BASE_URI/$ECR_NAME:$IMAGE_TAG | jq
+echo "\033[33mUpdating Lambda function: $LAMBDA_FUNCTION_NAME\033[0m"  # 黄色
+aws lambda update-function-code --function-name $LAMBDA_FUNCTION_NAME --image-uri $ECR_BASE_URI/$ECR_NAME:$IMAGE_TAG | jq
