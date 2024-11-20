@@ -1,2 +1,6 @@
 .env
+*.terraform
+*.tfstate
 *.tfvars
+myenv
+*.json
