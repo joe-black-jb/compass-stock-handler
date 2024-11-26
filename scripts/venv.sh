@@ -20,5 +20,7 @@ else
 fi
 
 python3 -m venv myenv
-source myenv/bin/activate
+source myenv/bin/activate # pip install するために一度有効化する
 pip install -r requirements.txt
+# -e : echo がエスケープシーケンスを解釈できるようにする
+echo -e "\n\033[32m以下のコマンドを実行して仮想環境を有効化してください\033[0m\nsource myenv/bin/activate" # 緑の文字で表示
